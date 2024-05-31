@@ -45,7 +45,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className='flex justify-end'>
-                    <Button className='rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300'>Let's talk</Button>
+                    <Button className='rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300'>Let&apos;s talk</Button>
                 </div>
             </nav >
         </Container>
@@ -53,5 +53,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-

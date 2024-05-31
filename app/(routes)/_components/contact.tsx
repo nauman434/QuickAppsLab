@@ -12,7 +12,7 @@ const Contact = () => {
             </div>
             <div>
                 <Button className='rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300 bg-white text-black hover:bg-white font-syne'>
-                    Let's talk
+                    Let&apos;s talk
                 </Button>
             </div>
         </div>

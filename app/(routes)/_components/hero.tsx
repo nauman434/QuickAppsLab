@@ -20,7 +20,7 @@ const Hero = () => {
                 <div className='flex flex-col gap-6'>
                     <p className='tracking-wide leading-[150%] text-gray-500 text-xl font-syne'>For more than a decade, merchants on Shopify have trusted Bold apps to help grow their ecommerce stores.</p>
                     <Button className='rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300'>
-                        Let's talk
+                        Let&apos;s talk
                     </Button>
                 </div>
             </div>
