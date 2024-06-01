@@ -2,6 +2,7 @@
 
 import Container from '@/components/Cotainer';
 import React, { useState } from 'react';
+import { motion } from 'framer-motion'
 
 interface ServingItem {
     id: string;
@@ -38,35 +39,54 @@ const Serve: React.FC = () => {
         <Container className='py-[80px]'>
             <div className='grid md:grid-cols-2 grid-cols-1 items-center md:gap-6 gap-10'>
                 <div>
-                    <h2 className='text-start md:text-[80px] text-[48px] font-bold font-syne'>
+                    <motion.h2
+                        initial={{ opacity: 0, x: -200 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{
+                            delay: 0.5,
+                            duration: 1,
+                            ease: "easeInOut",
+                        }}
+                        className="text-start md:text-[80px] text-[48px] font-bold font-syne text-white"
+                    >
                         Who We Serve
-                    </h2>
+                    </motion.h2>
                 </div>
-                <div className='flex flex-col gap-6'>
-                    {Serving.map((item, index) => (
-                        <div 
-                            key={index} 
-                            className={`border p-6 flex flex-col gap-4 ${activeIndex === index ? 'bg-gray-100' : 'bg-white'}`}
-                        >
+                <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                        delay: 0.4,
+                        duration: 1,
+                        ease: "easeInOut",
+                    }}
+                >
+                    <div className='flex flex-col gap-6'>
+                        {Serving.map((item, index) => (
                             <div
-                                className='flex items-center justify-between cursor-pointer'
-                                onClick={() => toggleDetail(index)}
+                                key={index}
+                                className={`border p-6 flex flex-col text-white  ${activeIndex === index ? 'bg-primary-green bg-opacity-50 gap-4 ' : 'bg-transparent'}`}
                             >
-                                <h4 className='text-[36px] font-syne font-bold'>{item.name}</h4>
-                                <span className='text-[36px] font-syne font-bold'>{item.id}</span>
+                                <div
+                                    className='flex items-center justify-between cursor-pointer'
+                                    onClick={() => toggleDetail(index)}
+                                >
+                                    <h4 className='text-[36px] font-syne font-bold'>{item.name}</h4>
+                                    <span className='text-[36px] font-syne font-bold'>{item.id}</span>
+                                </div>
+                                <div
+                                    className={`overflow-hidden transition-all duration-300 ease-in-out ${activeIndex === index ? 'max-h-40' : 'max-h-0'
+                                        }`}
+                                >
+                                    <p className='text-gray-100 font-syne tracking-wide text-lg'>
+                                        {item.detail}
+                                    </p>
+                                </div>
                             </div>
-                            <div
-                                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                                    activeIndex === index ? 'max-h-40' : 'max-h-0'
-                                }`}
-                            >
-                                <p className='text-gray-500 font-syne tracking-wide text-lg'>
-                                    {item.detail}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                </motion.div>
+
             </div>
         </Container>
     );

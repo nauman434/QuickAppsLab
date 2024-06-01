@@ -27,6 +27,7 @@ const config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          green: "#0FD46C"
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -54,7 +55,7 @@ const config = {
         },
       },
       fontFamily: {
-        syne: ["Syne", "sans-serif"]
+        syne: ["Poppins", "sans-serif"]
       },
       borderRadius: {
         lg: "var(--radius)",

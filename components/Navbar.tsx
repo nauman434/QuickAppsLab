@@ -37,7 +37,7 @@ const Navbar = () => {
                     <ul className='flex gap-8'>
                         {navLinks.map((link, index) => (
                             <li key={index}>
-                                <Link href={link.link} className='font-syne text-lg font-medium'>
+                                <Link href={link.link} className='font-syne font-medium text-white'>
                                     {link.name}
                                 </Link>
                             </li>
@@ -45,7 +45,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className='flex justify-end'>
-                    <Button className='rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300'>Let&apos;s talk</Button>
+                    <Button className='rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300 bg-primary-green hover:bg-primary-green text-primray'>Let&apos;s talk</Button>
                 </div>
             </nav >
         </Container>

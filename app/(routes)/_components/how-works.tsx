@@ -3,6 +3,7 @@
 import Container from '@/components/Cotainer'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 
 
@@ -10,13 +11,30 @@ const HowWorks = () => {
     return (
         <Container className='py-[80px]'>
             <div>
-                <h2 className='font-bold text-start text-[40px] md:text-[64px] text-white w-full font-syne'>
+                <motion.h2
+                    initial={{ opacity: 0, x: -200 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                        delay: 0.5,
+                        duration: 1,
+                        ease: "easeInOut",
+                    }}
+                    className="font-bold text-start text-[40px] md:text-[64px] text-white w-full font-syne"
+                >
                     How It Works?
-                </h2>
+                </motion.h2>
             </div>
-            <div className="">
+            <motion.div
+                initial={{ opacity: 0, y: 200 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                    delay: 0.5,
+                    duration: 1,
+                    ease: "easeInOut",
+                }}
+            >
                 <HoverEffect items={projects} />
-            </div>
+            </motion.div>
         </Container>
     )
 }

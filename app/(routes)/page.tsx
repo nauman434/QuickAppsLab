@@ -6,20 +6,23 @@ import { Separator } from '@/components/ui/separator'
 import Serve from './_components/serve'
 import HowWorks from './_components/how-works'
 import Contact from './_components/contact'
+import { SparklesCore } from '@/components/ui/sparkles'
 
 const Home = () => {
   return (
     <main>
       <Hero />
       <AboutSec />
-      <Separator />
+      <Separator className='bg-gray-800' />
+      
+        
       <WhyUs />
-      <Separator />
+      <Separator className='bg-gray-800' />
       <Serve />
       <div className='bg-primary '>
         <HowWorks />
-        <Separator  className='bg-gray-800'/>
-        <Contact/>
+        <Separator className='bg-gray-800' />
+        <Contact />
       </div>
     </main>
   )
