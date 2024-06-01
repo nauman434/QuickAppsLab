@@ -17,11 +17,7 @@ async function getData() {
     }
     `
 
-    const data = await client.fetch(query, {
-        next: {
-            revalidate: 10
-        }
-    })
+    const data = await client.fetch(query)
 
     if (!data) {
         throw new Error("Failed to fetch data");
