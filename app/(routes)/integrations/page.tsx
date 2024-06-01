@@ -17,13 +17,16 @@ async function getData() {
     }
     `
 
-    const data = await client.fetch(query)
+    const data = await client.fetch(query, {
+        next: {
+            revalidate: 10
+        }
+    })
 
     if (!data) {
         throw new Error("Failed to fetch data");
     }
 
-    console.log(data)
 
     return data;
 
