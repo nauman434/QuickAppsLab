@@ -44,7 +44,7 @@ const Navbar = () => {
                         ))}
                     </ul>
                 </div>
-                <div className='flex justify-end'>
+                <div className='sm:flex hidden justify-end'>
                     <Button className='rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300 bg-primary-green hover:bg-primary-green text-primray'>Let&apos;s talk</Button>
                 </div>
             </nav >

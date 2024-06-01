@@ -17,7 +17,7 @@ const AboutSec = () => {
                             duration: 1,
                             ease: "easeInOut",
                         }}
-                        className="text-start md:text-[54px] text-[38px] font-bold font-syne text-white"
+                        className="text-start md:text-[54px] text-[36px] font-bold font-syne text-white"
                     >
                         Are you tired of manual data entry and fragmented financial records?
                     </motion.h2>

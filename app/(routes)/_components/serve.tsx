@@ -47,7 +47,7 @@ const Serve: React.FC = () => {
                             duration: 1,
                             ease: "easeInOut",
                         }}
-                        className="text-start md:text-[80px] text-[48px] font-bold font-syne text-white"
+                        className="text-start md:text-[80px] text-[40px] font-bold font-syne text-white"
                     >
                         Who We Serve
                     </motion.h2>
@@ -71,7 +71,7 @@ const Serve: React.FC = () => {
                                     className='flex items-center justify-between cursor-pointer'
                                     onClick={() => toggleDetail(index)}
                                 >
-                                    <h4 className='text-[36px] font-syne font-bold'>{item.name}</h4>
+                                    <h4 className='sm:text-[36px] text-2xl font-syne font-bold'>{item.name}</h4>
                                     <span className='text-[36px] font-syne font-bold'>{item.id}</span>
                                 </div>
                                 <div

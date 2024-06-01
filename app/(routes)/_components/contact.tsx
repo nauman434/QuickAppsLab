@@ -17,7 +17,7 @@ const Contact = () => {
                             duration: 1,
                             ease: "easeInOut",
                         }}
-                        className="text-center md:text-[50px] text-[40px] font-bold font-syne text-white"
+                        className="text-center md:text-[50px] text-[26px] font-bold font-syne text-white"
                     >
                         Ready to transform your financial management with seamless QuickBooks integrations?
                     </motion.h2>
