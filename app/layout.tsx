@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Separator } from "@/components/ui/separator";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,8 @@ export default function RootLayout({
         <Navbar/>
         <Separator/>
         {children}
+        <Separator/>
+        <Footer/>
         </body>
     </html>
   );

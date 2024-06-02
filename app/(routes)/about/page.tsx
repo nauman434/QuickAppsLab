@@ -1,45 +1,43 @@
-'use client'
-
 import Container from '@/components/Cotainer'
 import React from 'react'
-import { motion } from 'framer-motion'
+import Hero from './_components/hero'
+import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards'
+
+const testimonials = [
+    { image: '/Accelo.png' },
+    { image: '/Acuity Scheduling.png' },
+    { image: '/ADP.png' },
+    { image: '/Airbnb.png' },
+    { image: '/Amazon business.png' },
+    { image: '/Amazon.png' },
+    { image: '/Appfolio.png' },
+    { image: '/asana.png' },
+    { image: '/Atera.png' },
+    { image: '/Authorizenet.png' },
+    { image: '/Airtable.png' },
+    { image: '/Avalara.png' },
+    { image: '/Bamboohr.png' },
+    { image: '/Bank of America.png' },
+    { image: '/Basecamp.png' },
+    { image: '/Bigcommerce.png' },
+    { image: '/Bigtime.png' },
+    { image: '/billcom.webp' },
+  ];
+  
 
 const About = () => {
-  return (
-    <Container className='py-[80px]'>
-            <div>
-                <div>
-                    <motion.h2
-                        initial={{ opacity: 0.5, x: 100 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{
-                            delay: 0.3,
-                            duration: 1,
-                            ease: "easeInOut",
-                        }}
-                        className="text-start md:text-[54px] text-[36px] font-bold font-syne text-white"
-                    >
-                        We Build Custom Integrations for Into Quickbooks
-                    </motion.h2>
-                </div>
-                <div className='grid md:grid-cols-3 grid-cols-1 md:mt-10 mt-4'>
-                    <div />
-                    <motion.p
-                        initial={{ opacity: 0, y: 100 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{
-                            delay: 0.3,
-                            duration: 1,
-                            ease: "easeInOut",
-                        }}
-                        className="leading-[150%] text-gray-400 font-syne md:text-2xl text-lg col-span-2"
-                    >
-                        We value privacy and confidentiality so only transfer your data between apps, store nothing
-                    </motion.p>
-                </div>
+    return (
+        <Container className='py-[80px]'>
+            <Hero />
+            <div className='mt-20'>
+                <InfiniteMovingCards
+                    items={testimonials}
+                    direction="right"
+                    speed="slow"
+                />
             </div>
         </Container>
-  )
+    )
 }
 
 export default About
