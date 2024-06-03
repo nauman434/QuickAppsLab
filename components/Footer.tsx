@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from './Cotainer'
+import Container from './Container'
 import Logo from './Logo'
 import Link from 'next/link'
 

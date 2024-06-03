@@ -1,6 +1,6 @@
 'use client'
 
-import Container from '@/components/Cotainer'
+import Container from '@/components/Container'
 import { SparklesCore } from '@/components/ui/sparkles'
 import React from 'react'
 import { motion } from 'framer-motion'

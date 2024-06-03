@@ -1,6 +1,6 @@
 'use client'
 
-import Container from '@/components/Cotainer'
+import Container from '@/components/Container'
 import { Button } from '@/components/ui/button'
 import { LampContainer } from '@/components/ui/lamp'
 import Image from 'next/image'

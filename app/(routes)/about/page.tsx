@@ -1,4 +1,4 @@
-import Container from '@/components/Cotainer'
+import Container from '@/components/Container'
 import React from 'react'
 import Hero from './_components/hero'
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards'

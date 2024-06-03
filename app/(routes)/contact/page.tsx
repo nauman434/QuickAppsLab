@@ -1,5 +1,5 @@
 import Hero from '@/app/(route)/_components/hero'
-import Container from '@/components/Cotainer'
+import Container from '@/components/Container'
 import Form from '@/components/Form'
 import React from 'react'
 import type { Metadata } from "next";

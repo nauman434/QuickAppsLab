@@ -1,6 +1,6 @@
 'use client'
 
-import Container from '@/components/Cotainer'
+import Container from '@/components/Container'
 import { Button } from '@/components/ui/button'
 import { LampContainer } from '@/components/ui/lamp'
 import Image from 'next/image'
@@ -26,7 +26,8 @@ const Hero = () => {
                 </motion.h1>
             </div>
             <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 w-full mt-20'>
-                <motion.div
+                <div></div>
+                {/* <motion.div
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{
@@ -37,7 +38,7 @@ const Hero = () => {
                 >
                     <Image src={'/team.png'} width={200} height={100} alt='img' />
                     <p className='text-normal mt-4 text-gray-200 font-syne font-bold'>Our Happy Customers</p>
-                </motion.div>
+                </motion.div> */}
                 <div className='md:flex hidden ' />
                 <motion.div
                     initial={{ opacity: 0, y: 100 }}

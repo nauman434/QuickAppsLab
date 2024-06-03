@@ -1,4 +1,4 @@
-import Container from "@/components/Cotainer";
+import Container from "@/components/Container";
 import { blogCard, fullBlog } from "@/lib/interface";
 import { client, urlFor } from "@/lib/sanity";
 import { PortableText } from "next-sanity";

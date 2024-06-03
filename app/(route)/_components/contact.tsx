@@ -1,5 +1,5 @@
 'use client'
-import Container from '@/components/Cotainer'
+import Container from '@/components/Container'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import { motion } from 'framer-motion'

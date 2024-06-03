@@ -1,6 +1,6 @@
 'use client'
 
-import Container from '@/components/Cotainer'
+import Container from '@/components/Container'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
 import React from 'react'
 import { motion } from 'framer-motion'
