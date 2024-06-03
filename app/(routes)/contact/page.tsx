@@ -2,6 +2,11 @@ import Hero from '@/app/(route)/_components/hero'
 import Container from '@/components/Cotainer'
 import Form from '@/components/Form'
 import React from 'react'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Contact',
+}
 
 const Contact = () => {
   return (

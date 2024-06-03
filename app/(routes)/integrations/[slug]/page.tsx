@@ -1,6 +1,6 @@
 import Container from "@/components/Cotainer";
 import { blogCard, fullBlog } from "@/lib/interface";
-import { client } from "@/lib/sanity";
+import { client, urlFor } from "@/lib/sanity";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 
@@ -10,6 +10,7 @@ async function getData(slug: string) {
         "currentSlug": slug.current,
         title,
         content,
+        image
     }[0]
     `
 
@@ -21,6 +22,31 @@ async function getData(slug: string) {
 
     return data;
 }
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+    const { slug } = params;
+    const data: fullBlog = await getData(slug)
+  
+    return {
+      title: data?.title,
+      description: data?.smallDescription,
+      alternates: {
+        canonical: `/blogs/${params.slug}`,
+        languages: {
+          "en-US": `/blogs/${params.slug}`,
+        }
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: data?.title,
+        description: data?.smallDescription,
+        images: [urlFor(data?.image).url()],
+        siteId: "0000328462",
+        creator: "@nauman",
+        creatorId: "328462"
+      }
+    };
+  }
 
 const Article = async ({ params }: { params: { slug: string } }) => {
     const { slug } = params;

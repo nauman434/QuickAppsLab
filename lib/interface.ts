@@ -10,4 +10,6 @@ export interface fullBlog {
     currentSlug: string;
     title: string;
     content: any;
+    smallDescription: string;
+    image: any,
   }

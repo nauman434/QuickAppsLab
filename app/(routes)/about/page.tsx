@@ -2,6 +2,11 @@ import Container from '@/components/Cotainer'
 import React from 'react'
 import Hero from './_components/hero'
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'About',
+  }
 
 const testimonials = [
     { image: '/Accelo.png' },
