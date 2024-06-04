@@ -1,11 +1,4 @@
-'use client'
-
 import Container from '@/components/Container'
-import { Button } from '@/components/ui/button'
-import { LampContainer } from '@/components/ui/lamp'
-import Image from 'next/image'
-import React from 'react'
-import { motion } from 'framer-motion'
 
 const Hero = () => {
     return (

@@ -1,4 +1,4 @@
-import Hero from '@/app/(route)/_components/hero'
+
 import Container from '@/components/Container'
 import Form from '@/components/Form'
 import React from 'react'
@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 const Contact = () => {
   return (
     <Container className='py-24 flex flex-col justify-center items-center'>
-      <Hero />
       <div className='grid md:grid-cols-2 grid-cols-1 w-full items-center'>
         <div>
           <h2

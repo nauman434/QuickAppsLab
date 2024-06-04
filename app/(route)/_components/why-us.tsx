@@ -34,31 +34,15 @@ const WhyUs = () => {
             <Container className='pb-[80px] flex flex-col justify-start items-center gap-10'>
                 <div className='grid md:grid-cols-2 grid-cols-1 gap-6 w-full'>
                     <div className='flex flex-col gap-6'>
-                        <motion.div
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{
-                                delay: 0.3,
-                                duration: 1,
-                                ease: "easeInOut",
-                            }}
-                            className='flex flex-col gap-6'
+                        <div className='flex flex-col gap-6'
                         >
 
                             <div className='flex flex-col gap-4'>
                                 <h4 className='sm:sm:text-[36px] text-2xl  font-syne font-bold text-white'>Tailored Solutions</h4>
                                 <p className='font-syne text-gray-400 tracking-wide'>Every business is unique, and so are its needs. We offer bespoke integration services that fit your specific requirements, ensuring smooth and efficient data flow between QuickBooks and your favorite business applications.</p>
                             </div>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{
-                                delay: 0.4,
-                                duration: 1,
-                                ease: "easeInOut",
-                            }}
-                            className='flex flex-col gap-6'
+                        </div>
+                        <div className='flex flex-col gap-6'
                         >
 
 
@@ -66,33 +50,19 @@ const WhyUs = () => {
                                 <h4 className='sm:text-[36px] text-2xl font-syne font-bold text-white'>Expert Team</h4>
                                 <p className='font-syne text-gray-400 tracking-wide'>Our team of experienced developers and financial experts are dedicated to providing top-notch integration services. We understand the intricacies of QuickBooks and the various third-party apps you use, ensuring a seamless integration process.</p>
                             </div>
-                        </motion.div>
+                        </div>
 
                     </div>
                     <div className='flex flex-col gap-6 '>
-                        <motion.div
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{
-                                delay: 0.5,
-                                duration: 1,
-                                ease: "easeInOut",
-                            }}
+                        <div
                             className='flex flex-col gap-6'
                         >
                             <div className='flex flex-col gap-4'>
                                 <h4 className='sm:text-[36px] text-2xl font-syne font-bold text-white'>Save Time and Reduce Errors</h4>
                                 <p className='font-syne text-gray-400 tracking-wide'>Manual data entry is prone to errors and time-consuming. Our automated integrations help you save time and reduce the risk of costly mistakes, ensuring your financial data is always accurate and up-to-date.</p>
                             </div>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{
-                                delay: 0.6,
-                                duration: 1,
-                                ease: "easeInOut",
-                            }}
+                        </div>
+                        <div
                             className='flex flex-col gap-6'
                         >
 
@@ -100,7 +70,7 @@ const WhyUs = () => {
                                 <h4 className='sm:text-[36px] text-2xl font-syne font-bold text-white'>Comprehensive Support</h4>
                                 <p className='font-syne text-gray-400 tracking-wide'>From initial consultation to ongoing support, we are with you every step of the way. Our commitment to customer satisfaction means you can rely on us for continuous support and updates as your business grows.</p>
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </Container>

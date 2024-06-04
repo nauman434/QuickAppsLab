@@ -11,30 +11,16 @@ const HowWorks = () => {
     return (
         <Container className='py-[80px]'>
             <div>
-                <motion.h2
-                    initial={{ opacity: 0, x: -200 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{
-                        delay: 0.5,
-                        duration: 1,
-                        ease: "easeInOut",
-                    }}
+                <h2
                     className="font-bold text-start text-[40px] md:text-[64px] text-white w-full font-syne"
                 >
                     How It Works?
-                </motion.h2>
+                </h2>
             </div>
-            <motion.div
-                initial={{ opacity: 0, y: 200 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                    delay: 0.5,
-                    duration: 1,
-                    ease: "easeInOut",
-                }}
+            <div
             >
                 <HoverEffect items={projects} />
-            </motion.div>
+            </div>
         </Container>
     )
 }
