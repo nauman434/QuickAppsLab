@@ -56,12 +56,12 @@ const Article = async ({ params }: { params: { slug: string } }) => {
     return (
         <Container className="py-[80px]">
             <div className="mt-8">
-                <h1 className="text-start md:text-[64px] text-[48px] font-bold font-syne w-full text-white ">
+                <h1 className="text-start md:text-[64px] text-[48px] font-bold font-syne w-full text-primary ">
                     {data.title}
                 </h1>
 
 
-                <div className="mt-16 prose prose-gray dark:prose-invert prose-lg prose-headings:text-white text-gray-300 prose-li:marker:text-white prose-a:text-blue-700">
+                <div className="mt-16 prose prose-blue dark:prose-invert prose-lg prose-headings:text-primary text-gray-500 prose-li:marker:text-white prose-a:text-blue-700">
                     <PortableText value={data.content} />
                 </div>
             </div>
