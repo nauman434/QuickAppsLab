@@ -40,7 +40,7 @@ const Serve: React.FC = () => {
             <div className='grid md:grid-cols-2 grid-cols-1 items-center md:gap-6 gap-10'>
                 <div>
                     <h2
-                        className="text-start md:text-[80px] text-[40px] font-bold font-syne text-white"
+                        className="text-start md:text-[80px] text-[40px] font-bold font-syne text-primary"
                     >
                         Who We Serve
                     </h2>
@@ -51,7 +51,7 @@ const Serve: React.FC = () => {
                         {Serving.map((item, index) => (
                             <div
                                 key={index}
-                                className={`border p-6 flex flex-col text-white  ${activeIndex === index ? 'bg-primary-green bg-opacity-50 gap-4 ' : 'bg-transparent'}`}
+                                className={`border p-6 flex flex-col   ${activeIndex === index ? 'bg-primary-green gap-4 text-white' : 'bg-transparent text-primary'}`}
                             >
                                 <div
                                     className='flex items-center justify-between cursor-pointer'

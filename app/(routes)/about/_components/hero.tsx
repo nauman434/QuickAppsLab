@@ -7,7 +7,7 @@ const Hero = () => {
     <div>
                 <div>
                     <h2
-                        className="text-start md:text-[54px] text-[36px] font-bold font-syne text-white"
+                        className="text-start md:text-[54px] text-[36px] font-bold font-syne text-primary"
                     >
                         We Build Custom Integrations for Into Quickbooks
                     </h2>

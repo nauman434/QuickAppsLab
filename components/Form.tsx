@@ -45,7 +45,7 @@ const Form: React.FC = () => {
                         type="text"
                         value={formData.fullName}
                         onChange={(e) => handleChange('fullName', e.target.value)}
-                        className='bg-[#212121] border-black h-[50px] text-gray-100'
+                        className='bg-gray-100 border-black h-[50px] text-gray-100'
                         placeholder='Full Name'
                     />
                 </div>
@@ -55,7 +55,7 @@ const Form: React.FC = () => {
                         type="email"
                         value={formData.email}
                         onChange={(e) => handleChange('email', e.target.value)}
-                        className='bg-[#212121] border-black h-[50px] text-gray-100'
+                        className='bg-gray-100 border-black h-[50px] text-gray-100'
                         placeholder='Email'
                     />
                 </div>
@@ -65,7 +65,7 @@ const Form: React.FC = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleChange('phone', e.target.value)}
-                        className='bg-[#212121] border-black h-[50px] text-gray-100'
+                        className='bg-gray-100 border-black h-[50px] text-gray-100'
                         placeholder='Phone'
                     />
                 </div>
@@ -74,7 +74,7 @@ const Form: React.FC = () => {
                     <Textarea
                         value={formData.message}
                         onChange={(e) => handleChange('message', e.target.value)}
-                        className='bg-[#212121] border-black h-[50px] text-gray-100'
+                        className='bg-gray-100 border-black h-[50px] text-gray-100'
                         placeholder='Message'
                     />
                 </div>

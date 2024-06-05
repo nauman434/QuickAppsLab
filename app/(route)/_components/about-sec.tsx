@@ -6,7 +6,7 @@ const AboutSec = () => {
             <div>
                 <div>
                     <h2
-                        className="text-start md:text-[54px] text-[36px] font-bold font-syne text-white"
+                        className="text-start md:text-[54px] text-[36px] font-bold font-syne text-primary"
                     >
                         Are you tired of manual data entry and fragmented financial records?
                     </h2>

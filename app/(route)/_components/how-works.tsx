@@ -12,7 +12,7 @@ const HowWorks = () => {
         <Container className='py-[80px]'>
             <div>
                 <h2
-                    className="font-bold text-start text-[40px] md:text-[64px] text-white w-full font-syne"
+                    className="font-bold text-start text-[40px] md:text-[64px] text-primary w-full font-syne"
                 >
                     How It Works?
                 </h2>

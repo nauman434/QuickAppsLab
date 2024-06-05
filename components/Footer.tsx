@@ -34,7 +34,7 @@ const Footer = () => {
                         <ul className='flex sm:flex-row flex-col items-center gap-8'>
                             {navLinks.map((link, index) => (
                                 <li key={index}>
-                                    <Link href={link.link} className='font-syne font-medium text-white text-center'>
+                                    <Link href={link.link} className='font-syne font-medium text-primary text-center'>
                                         {link.name}
                                     </Link>
                                 </li>

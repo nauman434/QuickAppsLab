@@ -44,7 +44,7 @@ const Navbar = () => {
                     <ul className="flex gap-8">
                         {navLinks.map((link, index) => (
                             <li key={index}>
-                                <Link href={link.link} className="font-syne font-medium text-white">
+                                <Link href={link.link} className="font-syne font-medium text-primary">
                                     {link.name}
                                 </Link>
                             </li>
@@ -58,18 +58,18 @@ const Navbar = () => {
                 </div>
                 <div className="md:hidden flex justify-end">
                     {menuOpen ? (
-                        <X className="text-white cursor-pointer transition-transform transform rotate-0 duration-300" onClick={toggleMenu} />
+                        <X className="text-primary cursor-pointer transition-transform transform rotate-0 duration-300" onClick={toggleMenu} />
                     ) : (
-                        <Menu className="text-white cursor-pointer transition-transform transform rotate-180 duration-300" onClick={toggleMenu} />
+                        <Menu className="text-primary cursor-pointer transition-transform transform rotate-180 duration-300" onClick={toggleMenu} />
                     )}
                 </div>
             </nav>
             {menuOpen && (
-                <div className="md:hidden flex flex-col items-center py-6 text-white transition-all duration-300 ease-in-out">
+                <div className="md:hidden flex flex-col items-center py-6 text-primary transition-all duration-300 ease-in-out">
                     <ul className="flex flex-col items-center gap-4 py-4">
                         {navLinks.map((link, index) => (
                             <li key={index}>
-                                <Link href={link.link} className="font-syne font-medium text-white" onClick={toggleMenu}>
+                                <Link href={link.link} className="font-syne font-medium text-primary" onClick={toggleMenu}>
                                     {link.name}
                                 </Link>
                             </li>

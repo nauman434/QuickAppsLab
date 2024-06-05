@@ -13,14 +13,13 @@ const Home = () => {
       <Hero />
       <AboutSec />
       <Separator className='bg-gray-800' />
-      
-        
+
+
       <WhyUs />
       <Separator className='bg-gray-800' />
       <Serve />
+      <HowWorks />
       <div className='bg-primary '>
-        <HowWorks />
-        <Separator className='bg-gray-800' />
         <Contact />
       </div>
     </main>
