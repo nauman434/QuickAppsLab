@@ -3,16 +3,16 @@ import { Button } from '@/components/ui/button'
 
 const Hero = () => {
     return (
-        <Container className='py-24 flex flex-col justify-center items-center'>
+        <Container className='py-[60px] flex flex-col justify-center items-center'>
 
             <div>
                 <h1
-                    className="text-center md:text-[80px] text-[36px] font-bold font-syne md:w-[70vw] w-full text-primary mt-10"
+                    className="text-center md:text-[60px] text-[36px] font-bold font-syne md:w-[70vw] w-full text-primary mt-10"
                 >
                     Streamline Your Business Operations with Seamless Data Integration
                 </h1>
             </div>
-            <div className='md:w-[500px] w-full mt-20'>
+            <div className='md:w-[500px] w-full mt-10'>
                 <div
                     className='flex flex-col sm:gap-6 gap-8 items-center'
                 >

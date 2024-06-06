@@ -16,7 +16,7 @@ const Contact = () => {
           <h2
             className="font-bold text-start text-[40px] md:text-[84px] text-primary md:w-[40vw] w-full font-syne"
           >
-            Contact Us Now
+            Contact Us
           </h2>
         </div>
         <Form />

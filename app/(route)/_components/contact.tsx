@@ -3,6 +3,7 @@ import Container from '@/components/Container'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const Contact = () => {
     return (
@@ -10,7 +11,7 @@ const Contact = () => {
             <div className='flex flex-col gap-10 items-center justify-center'>
                 <div className='md:w-[70vw] w-full'>
                     <h2
-                        className="text-center md:text-[50px] text-[26px] font-bold font-syne text-white"
+                        className="text-center md:text-[42px] text-[26px] font-bold font-syne text-white"
                     >
                         Ready to transform your financial management with seamless QuickBooks integrations?
                     </h2>
@@ -22,8 +23,10 @@ const Contact = () => {
                 </div>
                 <div
                 >
-                    <Button className='rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300 bg-white text-black hover:bg-white font-syne'>
+                    <Button className='rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300 bg-primary-green text-black hover:bg-white font-syne'>
+                    <Link href={'https://cal.com/quickappslab/intro'}>
                     Let&apos;s talk
+                    </Link>
                 </Button>
                 </div>
                 

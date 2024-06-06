@@ -21,6 +21,20 @@ const navLinks = [
         name: 'About Us',
         link: '/about'
     },
+];
+const navMobLinks = [
+    {
+        name: 'Home',
+        link: '/'
+    },
+    {
+        name: 'Integrations',
+        link: '/integrations'
+    },
+    {
+        name: 'About Us',
+        link: '/about'
+    },
     {
         name: 'Contact',
         link: '/contact'
@@ -52,8 +66,15 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="md:flex hidden justify-end items-center gap-4">
+                    <Button variant={'outline'} className="rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300 hover:border-primary-green text-primary">
+                        <Link href={'/contact'}>
+                            Contact
+                        </Link>
+                    </Button>
                     <Button className="rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300 bg-primary-green hover:bg-primary-green text-primary">
-                        Let&apos;s talk
+                        <Link href={'https://cal.com/quickappslab/intro'}>
+                            Let&apos;s talk
+                        </Link>
                     </Button>
                 </div>
                 <div className="md:hidden flex justify-end">
@@ -67,7 +88,7 @@ const Navbar = () => {
             {menuOpen && (
                 <div className="md:hidden flex flex-col items-center py-6 text-primary transition-all duration-300 ease-in-out">
                     <ul className="flex flex-col items-center gap-4 py-4">
-                        {navLinks.map((link, index) => (
+                        {navMobLinks.map((link, index) => (
                             <li key={index}>
                                 <Link href={link.link} className="font-syne font-medium text-primary" onClick={toggleMenu}>
                                     {link.name}
