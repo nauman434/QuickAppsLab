@@ -1,4 +1,5 @@
-import blog from "./blog";
+import articles from "./articles";
+import integrations from "./integrations";
 
 
-export const schemaTypes = [blog]
+export const schemaTypes = [integrations, articles]
