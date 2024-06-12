@@ -5,14 +5,14 @@ import Link from 'next/link'
 import React from 'react'
 
 interface ArticleData {
-    title: string;
-    currentSlug: string;
-    smallDescription: string;
-    image: any;
-  }
-  
-  async function getData(): Promise<ArticleData[]> {
-    const query = `
+  title: string;
+  currentSlug: string;
+  smallDescription: string;
+  image: any;
+}
+
+async function getData(): Promise<ArticleData[]> {
+  const query = `
     *[_type == 'articles'] | order(_createdAt desc) {
         title,
         "currentSlug": slug.current,
@@ -20,43 +20,36 @@ interface ArticleData {
         image
     }
     `;
-  
-    const data: ArticleData[] = await client.fetch(query);
-  
-  
-    if (!data) {
-      throw new Error("Failed to fetch data");
-    }
-  
-    return data;
+
+  const data: ArticleData[] = await client.fetch(query);
+
+
+  if (!data) {
+    throw new Error("Failed to fetch data");
   }
+
+  return data;
+}
 
 
 const ArticlesPage = async () => {
-    const data = await getData();
+  const data = await getData();
 
   return (
     <Container className='py-[80px] flex flex-col gap-10 items-center justify-center'>
-        <div className='grid md:grid-cols-3 grid-cols-1'>
-          {
-            data.map((item) => (
-              <div key={item.currentSlug} >
-                <Link href={`/articles/${item.currentSlug}`} className='flex flex-col gap-6'>
-                  <Image src={urlFor(item.image).url()} width={400} height={400} alt={item.title} className='w-full' />
-                  <div>
-                    <h2 className='font-bold font-syne text-2xl text-primary mb-2'>
-                      {item.title}
-                    </h2>
-                    <p className='text-gray-400 font-syne tracking-wide'>
-                      {item.smallDescription}
-                    </p>
-                  </div>
-                </Link>
+      <div className='grid md:grid-cols-3 grid-cols-1'>
+        {
+          data.map((item, index) => (
+            <Link key={index} href={`/articles/${item.currentSlug}`} className=''>
+              <div className='flex flex-col gap-[25px]'>
+                <Image src={urlFor(item.image).url()} width={380} height={394} alt={item.title} className='rounded-[50px] w-full h-[394px] object-cover ' />
+                <h4 className='text-2xl font-bold text-secondary-navy'>{item.title}</h4>
               </div>
-            ))
-          }
-        </div>
-      </Container>
+            </Link>
+          ))
+        }
+      </div>
+    </Container>
   )
 }
 

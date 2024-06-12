@@ -37,15 +37,15 @@ const Form: React.FC = () => {
     }
 
     return (
-        <div className="space-y-8">
+        <div className="space-y-8 bg-secondary-navy p-6 rounded-[40px]">
             <div className="flex flex-col space-y-4">
                 <div>
-                    <label className="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
+                    <label className="block text-sm font-medium text-muted-stone mb-2">Full Name</label>
                     <Input
                         type="text"
                         value={formData.fullName}
                         onChange={(e) => handleChange('fullName', e.target.value)}
-                        className='bg-gray-100 border-black h-[50px] text-gray-100'
+                        className='bg-[#0F3541] border-gray-700 h-[50px] text-muted-stone rounded-[20px]'
                         placeholder='Full Name'
                     />
                 </div>
@@ -55,7 +55,7 @@ const Form: React.FC = () => {
                         type="email"
                         value={formData.email}
                         onChange={(e) => handleChange('email', e.target.value)}
-                        className='bg-gray-100 border-black h-[50px] text-gray-100'
+                        className='bg-[#0F3541] border-gray-700 h-[50px] text-muted-stone rounded-[20px]'
                         placeholder='Email'
                     />
                 </div>
@@ -65,7 +65,7 @@ const Form: React.FC = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleChange('phone', e.target.value)}
-                        className='bg-gray-100 border-black h-[50px] text-gray-100'
+                        className='bg-[#0F3541] border-gray-700 h-[50px] text-muted-stone rounded-[20px]'
                         placeholder='Phone'
                     />
                 </div>
@@ -74,14 +74,14 @@ const Form: React.FC = () => {
                     <Textarea
                         value={formData.message}
                         onChange={(e) => handleChange('message', e.target.value)}
-                        className='bg-gray-100 border-black h-[50px] text-gray-100'
+                        className='bg-[#0F3541] border-gray-700 h-[50px] text-muted-stone rounded-[20px]'
                         placeholder='Message'
                     />
                 </div>
             </div>
 
             <div className="flex justify-end mt-4">
-                <Button type="button" onClick={sendEmail} className='rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300 bg-primary-green hover:bg-primary-green text-primray'>
+                <Button type="button" onClick={sendEmail} className='btn items-center justify-center'>
                     Submit
                 </Button>
 

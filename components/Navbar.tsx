@@ -21,8 +21,8 @@ const navLinks = [
         link: '/about'
     },
     {
-        name: 'Blogs',
-        link: '/blogs'
+        name: 'Articles',
+        link: '/articles'
     },
     {
         name: 'Contact',

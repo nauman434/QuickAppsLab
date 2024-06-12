@@ -10,14 +10,17 @@ export const metadata: Metadata = {
 
 const Contact = () => {
   return (
-    <Container className='py-24 flex flex-col justify-center items-center'>
-      <div className='grid md:grid-cols-2 grid-cols-1 w-full items-center gap-6'>
+    <Container className='sm:my-[100px] my-[36px]'>
+      <div className='grid md:grid-cols-2 grid-cols-1 w-full items-start gap-6'>
         <div>
           <h2
-            className="font-bold text-start text-[40px] md:text-[84px] text-primary md:w-[40vw] w-full font-syne"
+            className="heading_2"
           >
-            Contact Us
+            Let's Create <span className='font-bold text-primary-parrot'>Progress</span> Together
           </h2>
+          <p className='md:text-[24px] text-[16px] text-muted-stone mt-6 leading-[150%]'>
+            Contact us today for a free consultation and discover how we can help your business thrive.
+          </p>
         </div>
         <Form />
       </div>

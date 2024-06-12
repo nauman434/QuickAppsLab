@@ -12,56 +12,54 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import BlogSec from './_components/blog-sec'
+import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards'
 
-interface ArticleData {
-  title: string;
-  currentSlug: string;
-  smallDescription: string;
-  image: any;
-}
-
-async function getData(): Promise<ArticleData[]> {
-  const query = `
-  *[_type == 'articles'] | order(_createdAt desc) {
-      title,
-      "currentSlug": slug.current,
-      smallDescription,
-      image
-  }
-  `;
-
-  const data: ArticleData[] = await client.fetch(query);
-
-
-  if (!data) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return data;
-}
+const testimonials = [
+  { image: '/Accelo.png', name: 'Accelo' },
+  { image: '/Acuity Scheduling.png', name: 'Acuity Scheduling' },
+  { image: '/ADP.png', name: 'ADP' },
+  { image: '/Airbnb.png', name: 'Airbnb' },
+  // { image: '/Amazon business.png', name: 'Amazon business' },
+  { image: '/Amazon.png', name: 'Amazon' },
+  { image: '/Appfolio.png', name: 'Appfolio' },
+  { image: '/asana.png', name: 'Asana' },
+  { image: '/Atera.png', name: 'Atera' },
+  // { image: '/Authorizenet.png', name: 'Authorize.net' },
+  { image: '/Airtable.png', name: 'Airtable' },
+  { image: '/Avalara.png', name: 'Avalara' },
+  { image: '/Bamboohr.png', name: 'Bamboohr' },
+  { image: '/Bank of America.png', name: 'Bank of America' },
+  { image: '/Basecamp.png', name: 'Basecamp' },
+  { image: '/Bigcommerce.png', name: 'Bigcommerce' },
+  { image: '/Bigtime.png', name: 'Bigtime' },
+  { image: '/billcom.webp', name: 'Bill.com' },
+];
 
 
 const Home = async () => {
-  const data = await getData();
-
-
-
   return (
     <main className='sm:my-[100px] my-[36px]  flex flex-col w-full gap-[100px]'>
       <Hero />
+      <Container className=''>
+        <div className='mt-20'>
+          <InfiniteMovingCards
+            items={testimonials}
+            direction="right"
+            speed="slow"
+          />
+        </div>
+      </Container>
       <AboutSec />
       <WhyUs />
       <Serve />
       <div className='bg-secondary-navy py-[65px]'>
         <HowWorks />
       </div>
-      <BlogSec/>
+      <BlogSec />
       <Contact />
     </main>
   )
 }
-
-export const revalidate = 10;
 
 export default Home
 

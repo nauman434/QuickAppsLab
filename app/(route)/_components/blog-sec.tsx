@@ -56,7 +56,7 @@ const BlogSec = async () => {
             </div>
             <div className='grid md:grid-cols-3 grid-cols-1 gap-[30px]'>
                 {
-                    data.map((item, index) => (
+                    data.slice(0,2).map((item, index) => (
                         <Link key={index} href={`/articles/${item.currentSlug}`} className=''>
                             <div className='flex flex-col gap-[25px]'>
                                 <Image src={urlFor(item.image).url()} width={380} height={394} alt={item.title} className='rounded-[50px] w-full h-[394px] object-cover ' />
