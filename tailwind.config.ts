@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -27,11 +27,12 @@ const config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          green: "#0FD46C"
+          parrot: "#0FD46C"
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          navy: "#0D333F"
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -40,6 +41,8 @@ const config = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
+          sky: "#DBEDEE",
+          stone: '#9B9CA6'
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
@@ -80,7 +83,7 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        scroll:"scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite"
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite"
       }
     },
   },

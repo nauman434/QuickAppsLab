@@ -1,46 +1,118 @@
 import React from 'react'
 import Container from './Container'
 import Logo from './Logo'
+import Image from 'next/image'
 import Link from 'next/link'
 
-const navLinks = [
+const social = [
     {
-        name: "Home",
+        id: 1,
+        img: '/facebook.svg',
+        name: 'facebook'
+    },
+    {
+        id: 2,
+        img: '/linkedin.svg',
+        name: 'linkedin'
+    },
+    {
+        id: 3,
+        img: '/x.svg',
+        name: 'x'
+    },
+    {
+        id: 4,
+        img: '/insta.svg',
+        name: 'insta'
+    }
+]
+
+const explore = [
+    {
+        id: 1,
+        name: 'Home',
         link: '/'
     },
     {
-        name: "Integrations",
-        link: '/integrations'
-    },
-    {
-        name: "About Us",
+        id: 2,
+        name: 'About',
         link: '/about'
     },
     {
-        name: "Contact",
-        link: '/contact'
+        id: 3,
+        name: 'Integrations',
+        link: '/integrations'
+    },
+    {
+        id: 4,
+        name: 'Blogs',
+        link: '/blogs'
+    },
+
+]
+
+const company = [
+    {
+        id: 1,
+        name: 'FAQ',
+        link: '/faq'
+    },
+    {
+        id: 2,
+        name: 'Help',
+        link: '/help'
     },
 ]
 
 const Footer = () => {
     return (
-        <Container className='py-[80px]'>
-            <div className='grid md:grid-cols-2 grid-cols-1 items-center justify-center gap-8'>
-                <div className='flex md:justify-start justify-center'>
+        <Container className='pb-[100px] flex justify-between gap-[30px] flex-wrap'>
+            <div className='md:w-[380px] w-full flex flex-col gap-[40px]'>
+                <div className='flex flex-col gap-[20px]'>
                     <Logo />
+                    <p className='text-muted-stone leading-[150%]'>Simplify your workload with automated data transfers, allowing you to focus on providing valuable insights and strategic advice to your clients. Our integrations help you maintain accurate and up-to-date financial records effortlessly.</p>
                 </div>
-                <div className='flex md:justify-end justify-center'>
-                    <div className='flex justify-center'>
-                        <ul className='flex sm:flex-row flex-col items-center gap-8'>
-                            {navLinks.map((link, index) => (
-                                <li key={index}>
-                                    <Link href={link.link} className='font-syne font-medium text-primary text-center'>
-                                        {link.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                <div className='flex items-center gap-[30px]'>
+                    {
+                        social.map((item) => (
+                            <Image
+                                src={item.img}
+                                width={24}
+                                height={24}
+                                alt={item.name}
+                                key={item.id}
+                            />
+                        ))
+                    }
+                </div>
+            </div>
+            <div className='flex sm:items-start items-center sm:flex-row flex-col gap-[60px] sm:text-start text-center'>
+                <div className='flex flex-col gap-[15px]'>
+                    <p className='font-bold text-secondary-navy'>Explore</p>
+                    {
+                        explore.map((item) => (
+                            <Link key={item.id} href={item.link}>
+                                <p className='text-muted-stone mt-[10px] leading-[150%] cursor-pointer hover:text-secondary-navy'>{item.name}</p>
+                            </Link>
+                        ))
+                    }
+                </div>
+                <div className='flex flex-col gap-[15px]'>
+                    <p className='font-bold text-secondary-navy'>Company</p>
+                    {
+                        company.map((item) => (
+                            <Link key={item.id} href={item.link}>
+                                <p className='text-muted-stone mt-[10px] leading-[150%] cursor-pointer hover:text-secondary-navy'>{item.name}</p>
+                            </Link>
+                        ))
+                    }
+                </div>
+                <div className='flex flex-col gap-[15px]'>
+                    <p className='font-bold text-secondary-navy'>Contact</p>
+
+                    <p className='text-muted-stone mt-[10px] leading-[150%] cursor-pointer hover:text-secondary-navy'>
+                        Contact@quickappslab.com
+                    </p>
                 </div>
             </div>
         </Container>

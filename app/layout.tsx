@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Separator } from "@/components/ui/separator";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://quickappslab.com/"),
@@ -44,12 +43,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
-        <Separator/>
+        <Navbar />
         {children}
-        <Separator/>
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }

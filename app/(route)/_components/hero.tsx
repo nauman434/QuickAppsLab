@@ -1,28 +1,35 @@
 import Container from '@/components/Container'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
 
 const Hero = () => {
     return (
-        <Container className='py-[60px] flex flex-col justify-center items-center'>
+        <Container>
+            <div className='grid md:grid-cols-12 grid-cols-1'>
+                
+                <div className='col-span-5'>
+                    <h1 className='sm:text-[72px] text-[48px] leading-[150%]'>
+                        Seamless Data Integration for Business
+                    </h1>
+                    <div className='mt-5'>
+                        <p className='mb-5 text-muted-stone'>For more than a decade, merchants on Shopify have trusted Bold apps to help grow their ecommerce stores.</p>
+                        <Button className="btn">
+                            <Link href={'https://cal.com/quickappslab/intro'}>
+                                Let&apos;s talk
+                            </Link>
+                        </Button>
+                    </div>
 
-            <div>
-                <h1
-                    className="text-center md:text-[60px] text-[36px] font-bold font-syne md:w-[70vw] w-full text-primary mt-10"
-                >
-                    Streamline Your Business Operations with Seamless Data Integration
-                </h1>
-            </div>
-            <div className='md:w-[500px] w-full mt-10'>
-                <div
-                    className='flex flex-col sm:gap-6 gap-8 items-center'
-                >
-                    <p className='tracking-wide leading-[150%] text-gray-400 sm:text-xl text-normal text-center font-syne'>For more than a decade, merchants on Shopify have trusted Bold apps to help grow their ecommerce stores.</p>
-                    <Button className='rounded-full text-[16px] h-[55px] sm:w-[137px] w-full hover:transition-all hover:scale-105 ease-out duration-300 bg-primary-green hover:bg-primary-green text-primary'>
-                        Let&apos;s talk
-                    </Button>
                 </div>
-
-
+                <div className='md:col-span-2 col-span-1 flex items-center justify-center md:mt-0 mt-8'>
+                    <Image src="/stars.svg" width={119} height={131} alt='stars' className='md:w-[119px] w-[72px] md:h-[131px] h-[79px]'/>
+                </div>
+                <div className='col-span-1'></div>
+                <div className='col-span-4 md:flex hidden'>
+                    <Image src="/hero_img.png" width={380} height={432} alt='hero-image' className='rounded-[40px] h-full object-cover object-center' />
+                </div>
             </div>
         </Container>
     )

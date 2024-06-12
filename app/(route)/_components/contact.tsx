@@ -1,35 +1,33 @@
-'use client'
 import Container from '@/components/Container'
 import { Button } from '@/components/ui/button'
-import React from 'react'
-import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
+import React from 'react'
 
 const Contact = () => {
     return (
-        <Container className='py-[80px] flex flex-col items-center justify-center'>
-            <div className='flex flex-col gap-10 items-center justify-center'>
-                <div className='md:w-[70vw] w-full'>
-                    <h2
-                        className="text-center md:text-[42px] text-[26px] font-bold font-syne text-white"
-                    >
+        <Container className='w-full '>
+            <div className='bg-secondary-navy sm:py-[95px] py-[55px] sm:px-[65px] px-[35px] rounded-[50px]'>
+                <div className='mb-10'>
+                    <h2 className='heading text-muted-sky'>
                         Ready to transform your financial management with seamless QuickBooks integrations?
                     </h2>
-                    <p
-                        className="font-syne text-center mt-4 text-gray-400"
-                    >
-                        Contact us today for a free consultation and discover how we can help your business thrive.
-                    </p>
                 </div>
-                <div
-                >
-                    <Button className='rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300 bg-primary-green text-black hover:bg-white font-syne'>
-                    <Link href={'https://cal.com/quickappslab/intro'}>
-                    Let&apos;s talk
-                    </Link>
-                </Button>
+                <div className='flex md:flex-row flex-col gap-8 md:items-center items-start justify-between'>
+                    <div>
+                        <Image src="/stars_dark.svg" width={119} height={131} alt='stars' className='md:w-[119px] w-[72px] md:h-[131px] h-[79px]' />
+                    </div>
+                    <div className='md:w-[631px] w-full flex flex-col gap-[30px]'>
+                        <p className='md:text-[20px] text-[16px] text-muted-sky '>
+                            Contact us today for a free consultation and discover how we can help your business thrive.
+                        </p>
+                        <Button className="btn">
+                            <Link href={'https://cal.com/quickappslab/intro'}>
+                                Let&apos;s talk
+                            </Link>
+                        </Button>
+                    </div>
                 </div>
-                
             </div>
         </Container>
     )

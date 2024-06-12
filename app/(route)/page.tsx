@@ -11,6 +11,7 @@ import { client, urlFor } from '@/lib/sanity'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import BlogSec from './_components/blog-sec'
 
 interface ArticleData {
   title: string;
@@ -46,51 +47,16 @@ const Home = async () => {
 
 
   return (
-    <main>
+    <main className='sm:my-[100px] my-[36px]  flex flex-col w-full gap-[100px]'>
       <Hero />
       <AboutSec />
-      <Separator className='bg-gray-800' />
-
-
       <WhyUs />
-      <Separator className='bg-gray-800' />
       <Serve />
-      <HowWorks />
-      <Separator className='bg-gray-800' />
-      <Container className='py-[80px] flex flex-col gap-10 items-center justify-center'>
-        <div className='grid md:grid-cols-3 grid-cols-1'>
-          {
-            data.map((item) => (
-              <div key={item.currentSlug} >
-                <Link href={`/articles/${item.currentSlug}`} className='flex flex-col gap-6'>
-                  <Image src={urlFor(item.image).url()} width={400} height={400} alt={item.title} className='w-full' />
-                  <div>
-                    <h2 className='font-bold font-syne text-2xl text-primary mb-2'>
-                      {item.title}
-                    </h2>
-                    <p className='text-gray-400 font-syne tracking-wide'>
-                      {item.smallDescription}
-                    </p>
-                  </div>
-                </Link>
-              </div>
-            ))
-          }
-        </div>
-        <div>
-          <Button className="rounded-full text-[16px] h-[55px] w-[137px] hover:transition-all hover:scale-105 ease-out duration-300 bg-primary-green hover:bg-primary-green text-primary">
-            <Link href='/articles'>
-            All articles
-            </Link>
-          </Button>
-        </div>
-      </Container>
-      <div className='bg-primary '>
-        <Contact />
+      <div className='bg-secondary-navy py-[65px]'>
+        <HowWorks />
       </div>
-
-
-
+      <BlogSec/>
+      <Contact />
     </main>
   )
 }
