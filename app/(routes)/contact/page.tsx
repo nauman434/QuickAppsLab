@@ -16,7 +16,7 @@ const Contact = () => {
           <h2
             className="heading_2"
           >
-            Let's Create <span className='font-bold text-primary-parrot'>Progress</span> Together
+            Let&apos;s Create <span className='font-bold text-primary-parrot'>Progress</span> Together
           </h2>
           <p className='md:text-[24px] text-[16px] text-muted-stone mt-6 leading-[150%]'>
             Contact us today for a free consultation and discover how we can help your business thrive.
