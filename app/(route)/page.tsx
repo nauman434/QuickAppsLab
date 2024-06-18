@@ -41,7 +41,7 @@ const Home = async () => {
     <main className='sm:my-[100px] my-[36px]  flex flex-col w-full gap-[100px]'>
       <Hero />
       <Container className=''>
-        <div className='mt-20'>
+        <div className=''>
           <InfiniteMovingCards
             items={testimonials}
             direction="right"

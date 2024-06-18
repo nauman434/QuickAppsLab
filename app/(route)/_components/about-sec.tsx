@@ -16,7 +16,7 @@ const AboutSec = () => {
                         <Image src="/stars_dark.svg" width={119} height={131} alt='stars' className='md:w-[119px] w-[72px] md:h-[131px] h-[79px]' />
                     </div>
                     <p className='md:text-[20px] text-[16px] text-muted-sky md:w-[631px] w-full'>
-                        At QuickAppsLab, we specialize in creating custom integrations that effortlessly connect your business apps with QuickBooks. Our mission is to simplify your financial management, giving you more time to focus on what really matters—growing your business.
+                        At QuickAppsLab, we specialize in creating custom integrations that effortlessly connect your business apps with Quickapps Lab. Our mission is to simplify your financial management, giving you more time to focus on what really matters—growing your business.
                     </p>
                 </div>
             </div>

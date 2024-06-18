@@ -37,7 +37,7 @@ const HowWorks = () => {
         <Container>
             <div className='flex flex-col w-full gap-[50px]'>
                 <h2 className='heading_2 text-muted-sky text-center'>
-                    How it Works?
+                    How does it work?
                 </h2>
                 <div className='grid md:grid-cols-2 grid-cols-1 gap-[30px]'>
                     {

@@ -71,7 +71,7 @@
       @apply border-border;
     }
     body {
-      @apply bg-[url('/background.jpg')] bg-cover bg-top text-foreground;
+      @apply bg-[url('/background.jpg')] bg-no-repeat bg-cover bg-top text-foreground;
     }
   }
 
@@ -85,3 +85,13 @@
   .heading_2{
     @apply md:text-[64px] sm:text-[48px] text-[36px] leading-[150%]
   }
+
+
+  @keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

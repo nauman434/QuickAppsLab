@@ -11,10 +11,10 @@ const Hero = () => {
                 
                 <div className='col-span-5'>
                     <h1 className='sm:text-[72px] text-[48px] leading-[150%]'>
-                        Seamless Data Integration for Business
+                        Seamless Data Integration into Quickbooks
                     </h1>
                     <div className='mt-5'>
-                        <p className='mb-5 text-muted-stone'>QuickApps Lab delivers cutting-edge solutions for effortless data integration, allowing you to focus on growing your business.</p>
+                        <p className='mb-5 text-muted-stone'>We help companies, accountants, and finance teams integrate all their data from third party apps into quickbooks</p>
                         <Button className="btn">
                             <Link href={'https://cal.com/quickappslab/intro'}>
                                 Let&apos;s talk

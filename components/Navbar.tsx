@@ -69,11 +69,11 @@ const Navbar = () => {
 
             </nav>
             {menuOpen && (
-                <div className="md:hidden flex flex-col items-center py-6 text-primary transition-all duration-300 ease-in-out">
+                <div className="md:hidden flex flex-col items-center py-6 text-primary transition-all duration-1000 ease-in-out bg-primary-parrot rounded-lg animate-slideDown">
                     <ul className="flex flex-col items-center gap-4 py-4">
                         {navLinks.map((link, index) => (
                             <li key={index}>
-                                <Link href={link.link} className="text-secondary-navy" onClick={toggleMenu}>
+                                <Link href={link.link} className="text-muted-sky" onClick={toggleMenu}>
                                     {link.name}
                                 </Link>
                             </li>

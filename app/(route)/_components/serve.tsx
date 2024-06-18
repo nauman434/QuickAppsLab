@@ -34,8 +34,8 @@ const Serve = () => {
                 {
                     serve.map((item) => (
                         <div key={item.id} className='flex flex-wrap items-center justify-between'>
-                            <div className='flex  items-center md:gap-[70px] gap-4 sm:text-[48px] text-[24px] font-bold'>
-                                <div className='w-[40px]'>
+                            <div className='flex  items-center md:gap-[70px] gap-3 sm:text-[48px] text-[24px] font-bold'>
+                                <div className='w-[20px]'>
                                     <p className='text-primary-parrot '>{item.id}.</p>
                                 </div>
                                 <h2>{item.title}</h2>
