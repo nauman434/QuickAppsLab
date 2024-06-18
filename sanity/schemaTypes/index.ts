@@ -1,4 +1,4 @@
-import articles from "./articles";
+import articles from "./blogs";
 import integrations from "./integrations";
 
 

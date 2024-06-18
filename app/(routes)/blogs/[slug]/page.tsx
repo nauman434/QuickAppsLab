@@ -39,9 +39,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         title: data?.title,
         description: data?.smallDescription,
         alternates: {
-            canonical: `/articles/${params.slug}`,
+            canonical: `/blogs/${params.slug}`,
             languages: {
-                "en-US": `/articles/${params.slug}`,
+                "en-US": `/blogs/${params.slug}`,
             }
         },
         twitter: {

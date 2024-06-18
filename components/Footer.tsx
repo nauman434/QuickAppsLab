@@ -47,7 +47,7 @@ const explore = [
     {
         id: 4,
         name: 'Blogs',
-        link: '/articles'
+        link: '/blogs'
     },
 
 ]
