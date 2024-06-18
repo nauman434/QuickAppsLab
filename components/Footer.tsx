@@ -3,6 +3,7 @@ import Container from './Container'
 import Logo from './Logo'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Button } from './ui/button'
 
 const social = [
     {
@@ -66,7 +67,7 @@ const company = [
 
 const Footer = () => {
     return (
-        <Container className='pb-[100px] flex justify-between gap-[30px] flex-wrap'>
+        <Container className='pb-[100px] flex md:flex-row flex-col justify-between gap-[30px]'>
             <div className='md:w-[380px] w-full flex flex-col gap-[40px]'>
                 <div className='flex flex-col gap-[20px]'>
                     <Logo />
@@ -97,22 +98,19 @@ const Footer = () => {
                         ))
                     }
                 </div>
-                <div className='flex flex-col gap-[15px]'>
-                    <p className='font-bold text-secondary-navy'>Company</p>
-                    {
-                        company.map((item) => (
-                            <Link key={item.id} href={item.link}>
-                                <p className='text-muted-stone mt-[10px] leading-[150%] cursor-pointer hover:text-secondary-navy'>{item.name}</p>
-                            </Link>
-                        ))
-                    }
-                </div>
-                <div className='flex flex-col gap-[15px]'>
+                <div className='flex flex-col sm:items-start items-center gap-[15px]'>
                     <p className='font-bold text-secondary-navy'>Contact</p>
 
                     <p className='text-muted-stone mt-[10px] leading-[150%] cursor-pointer hover:text-secondary-navy'>
-                        Contact@quickappslab.com
+                        <Link href={'/contact'}>
+                        Contact Us
+                        </Link>
                     </p>
+                    <Button className="btn">
+                            <Link href={'https://cal.com/quickappslab/intro'}>
+                                Let&apos;s talk
+                            </Link>
+                        </Button>
                 </div>
             </div>
         </Container>

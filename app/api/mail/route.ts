@@ -16,6 +16,8 @@ export async function POST(request: Request) {
         Full Name, ${formData.fullName} 
         Email: ${formData.email}
         Phone: ${formData.phone}
+        Integration: ${formData.integrations}
+        Company: ${formData.company}
         Message: ${formData.message}
 
       `,

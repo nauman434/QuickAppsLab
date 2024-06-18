@@ -10,19 +10,19 @@ const Form: React.FC = () => {
         fullName: '',
         email: '',
         phone: '',
+        integrations: '',
+        company: '',
         message: ''
     });
 
-    const handleChange = (Input: string, value: string | boolean) => {
-        setFormData({ ...formData, [Input]: value });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleChange = (input: string, value: string | boolean) => {
+        setFormData({ ...formData, [input]: value });
     };
 
-    const handleSubmit = () => {
-        console.log('Form Data:', formData);
-
-    };
-
-    const sendEmail = async () => {
+    const handleSubmit = async () => {
+        setIsSubmitting(true);
         const response = await fetch('/api/mail', {
             method: 'POST',
             headers: {
@@ -32,8 +32,19 @@ const Form: React.FC = () => {
         });
 
         if (response.status === 200) {
-            console.log('Email sent successfully');
+            alert('Form submitted successfully');
+            setFormData({
+                fullName: '',
+                email: '',
+                phone: '',
+                integrations: '',
+                company: '',
+                message: ''
+            });
+        } else {
+            alert('There was an error submitting the form. Please try again.');
         }
+        setIsSubmitting(false);
     }
 
     return (
@@ -70,6 +81,26 @@ const Form: React.FC = () => {
                     />
                 </div>
                 <div>
+                    <label className="block text-sm font-medium text-muted-stone mb-2">Integration</label>
+                    <Input
+                        type="text"
+                        value={formData.integrations}
+                        onChange={(e) => handleChange('integrations', e.target.value)}
+                        className='bg-[#0F3541] border-gray-700 h-[50px] text-muted-stone rounded-[20px]'
+                        placeholder='Integration'
+                    />
+                </div>
+                <div>
+                    <label className="block text-sm font-medium text-muted-stone mb-2">Company</label>
+                    <Input
+                        type="text"
+                        value={formData.company}
+                        onChange={(e) => handleChange('company', e.target.value)}
+                        className='bg-[#0F3541] border-gray-700 h-[50px] text-muted-stone rounded-[20px]'
+                        placeholder='Company'
+                    />
+                </div>
+                <div>
                     <label className="block text-sm font-medium text-gray-400 mb-2">Message</label>
                     <Textarea
                         value={formData.message}
@@ -81,10 +112,9 @@ const Form: React.FC = () => {
             </div>
 
             <div className="flex justify-end mt-4">
-                <Button type="button" onClick={sendEmail} className='btn items-center justify-center'>
-                    Submit
+                <Button type="button" onClick={handleSubmit} disabled={isSubmitting} className='btn items-center justify-center'>
+                    {isSubmitting ? 'Submitting...' : 'Submit'}
                 </Button>
-
             </div>
         </div>
     );
