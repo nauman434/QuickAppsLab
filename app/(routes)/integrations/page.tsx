@@ -45,7 +45,7 @@ const Integrations = async () => {
             <Hero />
             <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4'>
                 {data.map((item, index) => (
-                    <div key={index} className='rounded-lg flex flex-col gap-5 p-5 border hover:border-primary-green hover:bg-opacity-50 cursor-default items-start transition-all ease-in-out duration-100'>
+                    <div key={index} className='rounded-lg flex flex-col gap-5 p-5 border hover:border-primary-parrot hover:bg-opacity-50 cursor-default items-start transition-all ease-in-out duration-100'>
                         <div className='p-2 h-[100px] rounded-sm flex justify-start items-start'>
                             <Image src={urlFor(item.image).url()} width={200} height={200} alt={item.company} style={{ objectFit: 'contain', height: '100%' }} />
                         </div>
@@ -56,7 +56,7 @@ const Integrations = async () => {
                         <p className='text-gray-400 font-syne tracking-wide'>
                             {item.smallDescription}
                         </p>
-                        <Button className='text-primary-green underline p-0' variant={'link'}>
+                        <Button className='text-primary-parrot underline p-0' variant={'link'}>
                             <Link href={`/integrations/${item.currentSlug}`}>
                                 Learn more
                             </Link>

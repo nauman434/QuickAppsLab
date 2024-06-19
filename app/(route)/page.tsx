@@ -41,7 +41,8 @@ const Home = async () => {
     <main className='sm:my-[100px] my-[36px]  flex flex-col w-full gap-[100px]'>
       <Hero />
       <Container className=''>
-        <div className=''>
+        <div className='flex flex-col items-center'>
+          <h4 className='font-bold text-muted-stone text-xl'>Software we integrate to QuickBooks</h4>
           <InfiniteMovingCards
             items={testimonials}
             direction="right"
@@ -55,7 +56,6 @@ const Home = async () => {
       <div className='bg-secondary-navy py-[65px]'>
         <HowWorks />
       </div>
-      <BlogSec />
       <Contact />
     </main>
   )

@@ -11,12 +11,12 @@ const Hero = () => {
                 
                 <div className='col-span-5'>
                     <h1 className='sm:text-[72px] text-[48px] leading-[150%]'>
-                        Seamless Data Integration into Quickbooks
+                        Seamless Data Integration into QuickBooks
                     </h1>
                     <div className='mt-5'>
-                        <p className='mb-5 text-muted-stone'>We help companies, accountants, and finance teams integrate all their data from third party apps into quickbooks</p>
+                        <p className='mb-5 text-muted-stone'>We help companies, accountants, and finance teams integrate all their data from third party apps into QuickBooks</p>
                         <Button className="btn">
-                            <Link href={'https://cal.com/quickappslab/intro'}>
+                            <Link href={'https://cal.com/QuickAppsLabs/intro'} target='_blank'>
                                 Let&apos;s talk
                             </Link>
                         </Button>

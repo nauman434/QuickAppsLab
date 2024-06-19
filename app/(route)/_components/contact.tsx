@@ -22,7 +22,7 @@ const Contact = () => {
                             Contact us today for a free consultation and discover how we can help your business thrive.
                         </p>
                         <Button className="btn">
-                            <Link href={'https://cal.com/quickappslab/intro'}>
+                            <Link href={'https://cal.com/QuickAppsLabs/intro'} target='_blank'>
                                 Let&apos;s talk
                             </Link>
                         </Button>

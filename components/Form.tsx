@@ -15,13 +15,57 @@ const Form: React.FC = () => {
         message: ''
     });
 
+    const [errors, setErrors] = useState({
+        fullName: '',
+        email: '',
+        phone: '',
+        integrations: '',
+        company: '',
+        message: ''
+    });
+
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleChange = (input: string, value: string | boolean) => {
+    const validate = () => {
+        const newErrors = {
+            fullName: '',
+            email: '',
+            phone: '',
+            integrations: '',
+            company: '',
+            message: ''
+        };
+
+        if (!formData.fullName) newErrors.fullName = 'Full Name is required';
+        if (!formData.email) {
+            newErrors.email = 'Email is required';
+        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            newErrors.email = 'Email address is invalid';
+        }
+        if (!formData.phone) {
+            newErrors.phone = 'Phone number is required';
+        } else if (!/^\d{10}$/.test(formData.phone)) {
+            newErrors.phone = 'Phone number is invalid';
+        }
+        if (!formData.integrations) newErrors.integrations = 'Integration is required';
+        if (!formData.company) newErrors.company = 'Company is required';
+        if (!formData.message) newErrors.message = 'Message is required';
+
+        setErrors(newErrors);
+
+        return Object.values(newErrors).every(error => error === '');
+    };
+
+    const handleChange = (input: string, value: string) => {
         setFormData({ ...formData, [input]: value });
+        setErrors({ ...errors, [input]: '' });
     };
 
     const handleSubmit = async () => {
+        if (!validate()) {
+            return;
+        }
+
         setIsSubmitting(true);
         const response = await fetch('/api/mail', {
             method: 'POST',
@@ -59,6 +103,7 @@ const Form: React.FC = () => {
                         className='bg-[#0F3541] border-gray-700 h-[50px] text-muted-stone rounded-[20px]'
                         placeholder='Full Name'
                     />
+                    {errors.fullName && <p className="text-red-500">{errors.fullName}</p>}
                 </div>
                 <div>
                     <label className="block text-sm font-medium text-gray-400 mb-2">Email</label>
@@ -69,6 +114,7 @@ const Form: React.FC = () => {
                         className='bg-[#0F3541] border-gray-700 h-[50px] text-muted-stone rounded-[20px]'
                         placeholder='Email'
                     />
+                    {errors.email && <p className="text-red-500">{errors.email}</p>}
                 </div>
                 <div>
                     <label className="block text-sm font-medium text-gray-400 mb-2">Phone</label>
@@ -79,6 +125,7 @@ const Form: React.FC = () => {
                         className='bg-[#0F3541] border-gray-700 h-[50px] text-muted-stone rounded-[20px]'
                         placeholder='Phone'
                     />
+                    {errors.phone && <p className="text-red-500">{errors.phone}</p>}
                 </div>
                 <div>
                     <label className="block text-sm font-medium text-muted-stone mb-2">Integration</label>
@@ -89,6 +136,7 @@ const Form: React.FC = () => {
                         className='bg-[#0F3541] border-gray-700 h-[50px] text-muted-stone rounded-[20px]'
                         placeholder='Integration'
                     />
+                    {errors.integrations && <p className="text-red-500">{errors.integrations}</p>}
                 </div>
                 <div>
                     <label className="block text-sm font-medium text-muted-stone mb-2">Company</label>
@@ -99,15 +147,17 @@ const Form: React.FC = () => {
                         className='bg-[#0F3541] border-gray-700 h-[50px] text-muted-stone rounded-[20px]'
                         placeholder='Company'
                     />
+                    {errors.company && <p className="text-red-500">{errors.company}</p>}
                 </div>
                 <div>
                     <label className="block text-sm font-medium text-gray-400 mb-2">Message</label>
                     <Textarea
                         value={formData.message}
                         onChange={(e) => handleChange('message', e.target.value)}
-                        className='bg-[#0F3541] border-gray-700 h-[50px] text-muted-stone rounded-[20px]'
+                        className='bg-[#0F3541] border-gray-700 h-[150px] text-muted-stone rounded-[20px]'
                         placeholder='Message'
                     />
+                    {errors.message && <p className="text-red-500">{errors.message}</p>}
                 </div>
             </div>
 

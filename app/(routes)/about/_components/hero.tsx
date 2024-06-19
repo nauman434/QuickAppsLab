@@ -8,7 +8,7 @@ const Hero = () => {
             <div className=''>
                 <div className='mb-10 md:w-[985px] w-full'>
                     <h2 className='heading_2 text-secondary-navy'>
-                        We Build Custom Integrations for Into Quickbooks
+                        We Build Custom Integrations for Into QuickBooks
                     </h2>
                 </div>
                 <div className='flex md:flex-row flex-col gap-8 md:items-center items-start justify-between'>

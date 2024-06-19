@@ -31,7 +31,7 @@ const WhyUs = () => {
             <div className=''>
                 <div className='flex flex-col gap-5 w-full'>
                     <p className='font-bold text-primary-parrot'>WHY CHOOSE US?</p>
-                    <h2 className='heading_2'>The Reason why you should choose <span className='font-bold text-primary-parrot'>Quickapps Lab</span></h2>
+                    <h2 className='heading_2'>The Reason why you should choose <span className='font-bold text-primary-parrot'>QuickAppsLabs</span></h2>
                 </div>
 
                 <div className='grid md:grid-cols-12 grid-cols-1 mt-[100px]'>

@@ -6,9 +6,9 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: 'About',
-  }
+}
 
-  const testimonials = [
+const testimonials = [
     { image: '/Accelo.png', name: 'Accelo' },
     { image: '/Acuity Scheduling.png', name: 'Acuity Scheduling' },
     { image: '/ADP.png', name: 'ADP' },
@@ -27,14 +27,15 @@ export const metadata: Metadata = {
     { image: '/Bigcommerce.png', name: 'Bigcommerce' },
     { image: '/Bigtime.png', name: 'Bigtime' },
     { image: '/billcom.webp', name: 'Bill.com' },
-  ];
-  
+];
+
 
 const About = () => {
     return (
-        <Container className='py-[80px]'>
+        <Container className='py-[80px] flex flex-col items-center'>
             <Hero />
-            <div className='mt-20'>
+            <div className='mt-20 flex flex-col items-center'>
+                <h4 className='font-bold text-muted-stone text-xl'>Software we integrate to QuickBooks</h4>
                 <InfiniteMovingCards
                     items={testimonials}
                     direction="right"

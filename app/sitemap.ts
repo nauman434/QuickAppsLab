@@ -1,5 +1,5 @@
 export default function sitemap() {
-    const baseUrl = 'https://quickappslab.com';
+    const baseUrl = 'https://QuickAppsLabs.com';
 
     return [
         {
