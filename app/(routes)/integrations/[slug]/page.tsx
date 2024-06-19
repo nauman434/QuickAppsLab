@@ -56,7 +56,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
   return (
     <Container className="py-[80px]">
       <div className="mt-8">
-        <div className='mb-7 flex w-full justify-end'>
+        <div className='mb-10'>
           <Image src={urlFor(data.image).url()} width={200} height={200} alt={data.title} style={{ objectFit: 'contain', height: '100%' }} />
         </div>
 
@@ -72,5 +72,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
     </Container>
   )
 }
+
+export const revalidate = 10;
 
 export default Article

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import SearchBar from '../_components/SearchBar';
 
 export const metadata: Metadata = {
     title: 'Integrations',
