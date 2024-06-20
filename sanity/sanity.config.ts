@@ -5,7 +5,7 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'QuickAppsLabs',
+  title: 'QuickAppsLab',
 
   projectId: '5qpp633y',
   dataset: 'production',

@@ -95,7 +95,7 @@ const Form: React.FC = () => {
         <div className="space-y-8 bg-secondary-navy p-6 rounded-[40px]">
             <div className="flex flex-col space-y-4">
                 <div>
-                    <label className="block text-sm font-medium text-muted-stone mb-2">Full Name</label>
+                    <Label className="block text-sm font-medium text-muted-stone mb-2">Full Name</Label>
                     <Input
                         type="text"
                         value={formData.fullName}
@@ -106,7 +106,7 @@ const Form: React.FC = () => {
                     {errors.fullName && <p className="text-red-500">{errors.fullName}</p>}
                 </div>
                 <div>
-                    <label className="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                    <Label className="block text-sm font-medium text-gray-400 mb-2">Email</Label>
                     <Input
                         type="email"
                         value={formData.email}
@@ -117,7 +117,7 @@ const Form: React.FC = () => {
                     {errors.email && <p className="text-red-500">{errors.email}</p>}
                 </div>
                 <div>
-                    <label className="block text-sm font-medium text-gray-400 mb-2">Phone</label>
+                    <Label className="block text-sm font-medium text-gray-400 mb-2">Phone</Label>
                     <Input
                         type="tel"
                         value={formData.phone}
@@ -128,7 +128,7 @@ const Form: React.FC = () => {
                     {errors.phone && <p className="text-red-500">{errors.phone}</p>}
                 </div>
                 <div>
-                    <label className="block text-sm font-medium text-muted-stone mb-2">Integration</label>
+                    <Label className="block text-sm font-medium text-muted-stone mb-2">Integration</Label>
                     <Input
                         type="text"
                         value={formData.integrations}
@@ -139,7 +139,7 @@ const Form: React.FC = () => {
                     {errors.integrations && <p className="text-red-500">{errors.integrations}</p>}
                 </div>
                 <div>
-                    <label className="block text-sm font-medium text-muted-stone mb-2">Company</label>
+                    <Label className="block text-sm font-medium text-muted-stone mb-2">Company</Label>
                     <Input
                         type="text"
                         value={formData.company}
@@ -150,7 +150,7 @@ const Form: React.FC = () => {
                     {errors.company && <p className="text-red-500">{errors.company}</p>}
                 </div>
                 <div>
-                    <label className="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                    <Label className="block text-sm font-medium text-gray-400 mb-2">Message</Label>
                     <Textarea
                         value={formData.message}
                         onChange={(e) => handleChange('message', e.target.value)}

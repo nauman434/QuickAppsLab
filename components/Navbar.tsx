@@ -53,7 +53,7 @@ const Navbar = () => {
                     </div>
                     <div className="md:flex hidden justify-end items-center gap-4">
                         <Button className="btn">
-                            <Link href={'https://cal.com/QuickAppsLabs/intro'} target='_blank'>
+                            <Link href={'https://cal.com/QuickAppsLab/intro'} target='_blank'>
                                 Let&apos;s talk
                             </Link>
                         </Button>

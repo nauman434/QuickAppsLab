@@ -14,9 +14,9 @@ const Hero = () => {
                         Seamless Data Integration into QuickBooks
                     </h1>
                     <div className='mt-5'>
-                        <p className='mb-5 text-muted-stone'>We help companies, accountants, and finance teams integrate all their data from third party apps into QuickBooks</p>
+                        <p className='mb-5 text-muted-stone'>We help companies, accountants, and finance teams integrate all their data from third party apps and software into QuickBooks</p>
                         <Button className="btn">
-                            <Link href={'https://cal.com/QuickAppsLabs/intro'} target='_blank'>
+                            <Link href={'https://cal.com/QuickAppsLab/intro'} target='_blank'>
                                 Let&apos;s talk
                             </Link>
                         </Button>

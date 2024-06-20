@@ -72,7 +72,7 @@ const Footer = () => {
              sm:items-start items-center'>
                 <div className='flex flex-col gap-[20px] '>
                     <Logo />
-                    <p className='text-muted-stone leading-[150%] sm:text-start text-center'>Simplify your workload with automated data transfers, allowing you to focus on providing valuable insights and strategic advice to your clients. Our integrations help you maintain accurate and up-to-date financial records effortlessly.</p>
+                    <p className='text-muted-stone leading-[150%] sm:text-start text-center'>We help companies, accountants, and finance teams integrate all their data from third party apps and software into QuickBooks</p>
                 </div>
                 <div className='flex items-center gap-[30px]'>
                     {
@@ -108,7 +108,7 @@ const Footer = () => {
                         </Link>
                     </p>
                     <Button className="btn">
-                            <Link href={'https://cal.com/QuickAppsLabs/intro'} target='_blank'>
+                            <Link href={'https://cal.com/QuickAppsLab/intro'} target='_blank'>
                                 Let&apos;s talk
                             </Link>
                         </Button>

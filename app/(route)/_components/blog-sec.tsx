@@ -40,7 +40,7 @@ const BlogSec = async () => {
             <div className='flex justify-between flex-wrap items-start gap-5'>
                 <div className='md:w-[593px] w-full'>
                     <h2 className='heading_2'>
-                        Latest Insights from <span className='font-bold text-primary-parrot'>QuickAppsLabs</span>
+                        Latest Insights from <span className='font-bold text-primary-parrot'>QuickAppsLab</span>
                     </h2>
                     <p className='text-muted-stone leading-[150%] mt-[25px]'>
                         Stay updated with our expert insights, industry trends, and practical tips to enhance your business efficiency.
