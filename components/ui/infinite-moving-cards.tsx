@@ -87,14 +87,14 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[200px] h-[200px] max-w-full relative flex-shrink-0 px-2 py-6 md:w-[200px] md:h-[200px] flex justify-center items-center"
+            className="w-[150px] h-[150px] max-w-full relative flex-shrink-0 px-2 py-6 md:w-[150px] md:h-[150px] flex justify-center items-center"
             key={idx}
           >
             <Image
               src={item.image}
               alt={`Image ${idx}`}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               className="object-cover"
             />
           </li>

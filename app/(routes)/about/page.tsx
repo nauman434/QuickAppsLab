@@ -3,41 +3,53 @@ import React from 'react'
 import Hero from './_components/hero'
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards'
 import { Metadata } from 'next'
+import { client, urlFor } from '@/lib/sanity'
 
 export const metadata: Metadata = {
     title: 'About',
 }
 
-const testimonials = [
-    { image: '/Accelo.png', name: 'Accelo' },
-    { image: '/Acuity Scheduling.png', name: 'Acuity Scheduling' },
-    { image: '/ADP.png', name: 'ADP' },
-    { image: '/Airbnb.png', name: 'Airbnb' },
-    // { image: '/Amazon business.png', name: 'Amazon business' },
-    { image: '/Amazon.png', name: 'Amazon' },
-    { image: '/Appfolio.png', name: 'Appfolio' },
-    { image: '/asana.png', name: 'Asana' },
-    { image: '/Atera.png', name: 'Atera' },
-    // { image: '/Authorizenet.png', name: 'Authorize.net' },
-    { image: '/Airtable.png', name: 'Airtable' },
-    { image: '/Avalara.png', name: 'Avalara' },
-    { image: '/Bamboohr.png', name: 'Bamboohr' },
-    { image: '/Bank of America.png', name: 'Bank of America' },
-    { image: '/Basecamp.png', name: 'Basecamp' },
-    { image: '/Bigcommerce.png', name: 'Bigcommerce' },
-    { image: '/Bigtime.png', name: 'Bigtime' },
-    { image: '/billcom.webp', name: 'Bill.com' },
-];
+interface ArticleData {
+    title: string;
+    currentSlug: string;
+    smallDescription: string;
+    image: any;
+  }
+  
+  async function getData(): Promise<ArticleData[]> {
+    const query = `
+    *[_type == 'blog'] | order(_createdAt desc) {
+          company,
+          "currentSlug": slug.current,
+          smallDescription,
+          image
+      }
+    `;
+  
+    const data: ArticleData[] = await client.fetch(query);
+  
+    if (!data) {
+      throw new Error("Failed to fetch data");
+    }
+  
+    return data;
+  }
 
+const About = async () => {
+    const data = await getData();
 
-const About = () => {
+  const transformedItems = data.map(article => ({
+    image: urlFor(article.image).url(),
+    name: article.title,
+  })).slice(0, 15); 
+
     return (
         <Container className='py-[80px] flex flex-col items-center'>
             <Hero />
             <div className='mt-20 flex flex-col items-center'>
                 <h4 className='font-bold text-muted-stone text-xl'>Software we integrate to QuickBooks</h4>
                 <InfiniteMovingCards
-                    items={testimonials}
+                    items={transformedItems}
                     direction="right"
                     speed="slow"
                 />
