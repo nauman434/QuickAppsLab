@@ -32,6 +32,7 @@ const SearchBar: React.FC = () => {
       return;
     }
     const results = await searchBlogs(searchTerm);
+    console.log('Fetched results:', results);  // Debug log
     setSearchResults(results);
   };
 
