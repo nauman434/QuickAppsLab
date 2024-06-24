@@ -9,9 +9,9 @@ export async function POST(request: Request) {
     const formData = await request.json();
 
     const { data, error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
-      to: ['ijaznauman68@gmail.com'],
-      subject: 'Hello world',
+      from: 'User Details',
+      to: ['imraan@quickappslab.com'],
+      subject: 'User Information',
       text: `
         Full Name, ${formData.fullName} 
         Email: ${formData.email}

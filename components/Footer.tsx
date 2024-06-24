@@ -9,23 +9,21 @@ const social = [
     {
         id: 1,
         img: '/facebook.svg',
-        name: 'facebook'
+        name: 'facebook',
+        path: 'https://www.facebook.com/quickappslab'
     },
     {
         id: 2,
         img: '/linkedin.svg',
-        name: 'linkedin'
+        name: 'linkedin',
+        path: 'linkedin.com/company/quickappslab'
     },
     {
         id: 3,
         img: '/x.svg',
-        name: 'x'
+        name: 'x',
+        path: 'https://x.com/Quickappslab'
     },
-    {
-        id: 4,
-        img: '/insta.svg',
-        name: 'insta'
-    }
 ]
 
 const explore = [
@@ -77,13 +75,15 @@ const Footer = () => {
                 <div className='flex items-center gap-[30px]'>
                     {
                         social.map((item) => (
-                            <Image
-                                src={item.img}
-                                width={24}
-                                height={24}
-                                alt={item.name}
-                                key={item.id}
-                            />
+                            <Link href={item.path} key={item.id} target='_blank'>
+                                <Image
+                                    src={item.img}
+                                    width={24}
+                                    height={24}
+                                    alt={item.name}
+                                    className='hover:scale-110 transition-all ease-in-out duration-300'
+                                />
+                            </Link>
                         ))
                     }
                 </div>
@@ -104,14 +104,14 @@ const Footer = () => {
 
                     <p className='text-muted-stone mt-[10px] leading-[150%] cursor-pointer hover:text-secondary-navy'>
                         <Link href={'/contact'}>
-                        Contact Us
+                            Contact Us
                         </Link>
                     </p>
                     <Button className="btn">
-                            <Link href={'https://cal.com/QuickAppsLab/intro'} target='_blank'>
-                                Let&apos;s talk
-                            </Link>
-                        </Button>
+                        <Link href={'https://cal.com/QuickAppsLab/intro'} target='_blank'>
+                            Let&apos;s talk
+                        </Link>
+                    </Button>
                 </div>
             </div>
         </Container>
