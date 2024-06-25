@@ -52,7 +52,9 @@ export default function RootLayout({
         <Analytics />
         <Footer />
       </body>
-      <GoogleTagManager gtmId="G-VV85CTCHY1" />
+
+      <GoogleTagManager gtmId="GTM-54KVWSH9"  />
+      
     </html>
   );
 }
