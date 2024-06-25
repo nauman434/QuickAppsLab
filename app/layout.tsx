@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Outfit({ subsets: ["latin"] });
 
@@ -54,6 +54,7 @@ export default function RootLayout({
       </body>
 
       <GoogleTagManager gtmId="GTM-54KVWSH9"  />
+      <GoogleAnalytics gaId="G-VV85CTCHY1" />
       
     </html>
   );
