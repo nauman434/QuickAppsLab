@@ -1,15 +1,30 @@
-export interface blogCard {
-    title: string,
-    company: string,
-    smallDescription: string,
-    currentSlug: string,
-    image: any,
-}
-
-export interface fullBlog {
-    currentSlug: string;
+export interface BlogCard {
     title: string;
-    content: any;
+    company: string;
     smallDescription: string;
-    image: any,
+    currentSlug: string;
+    image: any;
   }
+  
+  interface Benefit {
+    id: string;
+    heading: string;
+    description: string;
+  }
+  
+  interface Testimonial {
+    name: string;
+    quote: string;
+    occupation: string;
+  }
+  
+  export interface FullBlog extends BlogCard {
+    content: any;
+    keyBenefits: Benefit[];
+    offer: Benefit[];
+    steps: Benefit[];
+    chooseUs: Benefit[];
+    faqs: Benefit[];
+    testimonial: Testimonial[];
+  }
+  

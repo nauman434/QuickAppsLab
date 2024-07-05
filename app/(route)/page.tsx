@@ -41,6 +41,7 @@ const Home = async () => {
   const transformedItems = data.map(article => ({
     image: urlFor(article.image).url(),
     name: article.title,
+    path: article.currentSlug,
   })).slice(0, 15); 
 
   return (
