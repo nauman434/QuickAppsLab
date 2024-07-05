@@ -233,7 +233,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
             <div className="banner-content">
               {data.testimonial.map((item, index) => (
                 <div className="w-[400px] bg-secondary-navy p-6 rounded-3xl flex flex-col gap-8" key={index}>
-                  <p className="text-muted-sky"><span className="font-bold text-4xl text-primary-parrot">"</span>{" "}{item.quote}</p>
+                  <p className="text-muted-sky"><span className="font-bold text-4xl text-primary-parrot">&quot;</span>{" "}{item.quote}</p>
                   <div>
                     <p className="font-bold text-primary-parrot">
                       {item.name}
