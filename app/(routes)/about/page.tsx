@@ -37,11 +37,13 @@ interface ArticleData {
 
 const About = async () => {
     const data = await getData();
+    
 
-  const transformedItems = data.map(article => ({
-    image: urlFor(article.image).url(),
-    name: article.title,
-  })).slice(0, 15); 
+    const transformedItems = data.map(article => ({
+      image: urlFor(article.image).url(),
+      name: article.title,
+      path: article.currentSlug,
+    })).slice(0, 15); 
 
     return (
         <Container className='py-[80px] flex flex-col items-center'>
