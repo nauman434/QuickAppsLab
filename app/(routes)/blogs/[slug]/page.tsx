@@ -76,4 +76,6 @@ const ArticleBlog = async ({ params }: { params: { slug: string } }) => {
     )
 }
 
+export const revalidate = 10;
+
 export default ArticleBlog
