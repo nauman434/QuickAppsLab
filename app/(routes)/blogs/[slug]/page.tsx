@@ -66,7 +66,7 @@ const ArticleBlog = async ({ params }: { params: { slug: string } }) => {
                 <h1 className="text-start md:text-[64px] text-[48px] font-bold font-syne w-full text-primary mb-8">
                     {data.title}
                 </h1>
-                <Image src={urlFor(data.image).url()} width={400} height={400} alt={data.title} className='w-full rounded-lg' />
+                <Image src={urlFor(data.image).url()} width={400} height={400} alt={data.title} className='w-full rounded-lg h-[600px] object-fit' />
 
                 <div className="mt-16 prose prose-blue dark:prose-invert prose-lg prose-headings:text-primary text-gray-500 prose-li:marker:text-primary prose-a:text-blue-700">
                     <PortableText value={data.content} />

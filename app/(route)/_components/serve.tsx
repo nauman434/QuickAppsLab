@@ -38,7 +38,7 @@ const Serve = () => {
                                 <div className='w-[40px]'>
                                     <p className='text-primary-parrot '>{item.id}.</p>
                                 </div>
-                                <h2>{item.title}</h2>
+                                <h2 className='text-secondary-navy'>{item.title}</h2>
                             </div>
                             <p className='md:w-[585px] w-full leading-[150%] text-muted-stone'>{item.details}</p>
                         </div>

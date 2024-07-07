@@ -14,7 +14,7 @@ const Contact = () => {
       <div className='grid md:grid-cols-2 grid-cols-1 w-full items-start gap-8'>
         <div>
           <h2
-            className="heading_2"
+            className="heading_2 text-secondary-navy"
           >
             Let&apos;s <span className='font-bold text-primary-parrot'>connect!</span>
           </h2>

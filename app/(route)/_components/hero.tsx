@@ -10,7 +10,7 @@ const Hero = () => {
             <div className='grid md:grid-cols-12 grid-cols-1'>
                 
                 <div className='col-span-5'>
-                    <h1 className='sm:text-[72px] text-[48px] leading-[150%]'>
+                    <h1 className='sm:text-[72px] text-[48px] leading-[150%] text-secondary-navy'>
                         Seamless Data Integration into QuickBooks
                     </h1>
                     <div className='mt-5'>

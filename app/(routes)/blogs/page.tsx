@@ -16,6 +16,7 @@ interface ArticleData {
   smallDescription: string;
   image: any;
   _createdAt: string;
+  smallImage: any;
 }
 
 const categories = [
@@ -40,7 +41,8 @@ async function getData(): Promise<ArticleData[]> {
         "currentSlug": slug.current,
         smallDescription,
         image,
-        _createdAt
+        _createdAt,
+        smallImage
     }
     `;
 
@@ -61,33 +63,11 @@ const ArticlesPage = async () => {
       <div className='py-[30px]  flex flex-col gap-10 items-center 
        '>
         <div className='flex flex-col items-center'>
-          <h2 className='heading text-secondary-navy text-center'>Discover Nice Articles Here</h2>
+          <h2 className='text-center md:text-[64px] text-[28px] font-bold font-syne md:w-[70vw] w-full text-primary mb-8 text-secondary-navy'>Discover Nice Articles</h2>
           <p className='md:text-[20px] text-[16px] text-muted-stone md:w-[631px] w-full text-center'>All the articles and contents of the site have been updated today and you can find your articles and contests quickly without any problems</p>
         </div>
         <div className='flex md:flex-row flex-col md:items-center items-start w-full gap-10'>
-          {/* <div className='md:hidden flex'>
-            <ul className='flex gap-4 h-[50px] items-center'>
-              {
-                categories.map((category, index) => (
-                  <li key={index} className='h-[50px] items-center flex justify-center'>
-                    <Link href='#' className={`${category.name === 'All' ? 'bg-primary-parrot' : 'bg-[#135265] text-muted-sky'} px-4 h-[50px] flex items-center justify-center rounded-full w-[130px] hover:bg-primary-parrot hover:text-secondary-navy transition-all ease-in-out duration-300`}>{category.name}</Link>
-                  </li>
-                ))
-              }
-            </ul>
-          </div> */}
           <Categories />
-          {/* <div className='md:flex hidden '>
-            <ul className='flex gap-4 h-[50px] items-center'>
-              {
-                categories.map((category, index) => (
-                  <li key={index} className='h-[50px] items-center flex justify-center'>
-                    <Link href='#' className={`${category.name === 'All' ? 'bg-primary-parrot' : 'bg-[#135265] text-muted-sky'} px-4 h-[50px] flex items-center justify-center rounded-full w-[130px] hover:bg-primary-parrot hover:text-secondary-navy transition-all ease-in-out duration-300`}>{category.name}</Link>
-                  </li>
-                ))
-              }
-            </ul>
-          </div> */}
         </div>
       </div>
       <div className='flex gap-6 items-center justify-center'>
@@ -96,7 +76,7 @@ const ArticlesPage = async () => {
         <div className='w-full h-[1px] bg-muted-stone' />
       </div>
       <div>
-        <Trending/>
+        <Trending />
         <div className='flex gap-6 items-center justify-center pt-[50px]'>
           <div className='w-full h-[1px] bg-muted-stone' />
           <h4 className='font-bold uppercase'>Popular</h4>
@@ -106,8 +86,8 @@ const ArticlesPage = async () => {
           {
             data.map((item, index) => (
               <div key={index} className=''>
-                <div className='flex flex-col gap-[25px]'>
-                  <Image src={urlFor(item.image).url()} width={380} height={394} alt={item.title} className='rounded-[20px] w-full h-[394px] object-cover ' />
+                <div className='flex flex-col gap-[25px] cursor-pointer'>
+                  <Image src={urlFor(item.smallImage).url()} width={380} height={270} alt={item.title} className='rounded-[20px] w-full h-[270px] object-fit ' />
                   <div className='flex gap-2 flex-col border-b pb-4'>
                     <h4 className='text-xl h-[60px] font-bold text-secondary-navy'>{item.title}</h4>
                     <p>{item.smallDescription}</p>

@@ -22,6 +22,11 @@ export default {
         title: 'Main Image',
       },
       {
+        name: 'smallImage',
+        type: 'image',
+        title: 'Small Image',
+      },
+      {
         name: 'smallDescription',
         type: 'text',
         title: 'Small Description',
