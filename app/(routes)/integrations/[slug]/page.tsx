@@ -13,6 +13,7 @@ interface BlogData {
   company: string;
   currentSlug: string;
   smallDescription: string;
+  metatitle: string;
   image: any;
 }
 
@@ -21,6 +22,8 @@ async function getData(slug: string) {
     *[_type == "blog" && slug.current == '${slug}'] {
         "currentSlug": slug.current,
         title,
+        metatitle,
+metadescription,
         content,
         smallDescription,
         image,
@@ -67,8 +70,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 
   return {
-    title: data?.title,
-    description: data?.smallDescription,
+    title: data?.metatitle,
+    description: data?.metadescription,
     alternates: {
       canonical: `/blogs/${params.slug}`,
       languages: {

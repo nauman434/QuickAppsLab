@@ -9,6 +9,16 @@ export default {
             title: 'Title'
         },
         {
+            name: 'metatitle',
+            type: 'string',
+            title: 'Meta Title'
+        },
+        {
+            name: 'metadescription',
+            type: 'text',
+            title: 'Meta Description'
+        },
+        {
             name: 'company',
             type: 'string',
             title: 'Company'
